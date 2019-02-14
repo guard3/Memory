@@ -174,6 +174,7 @@ namespace Memory
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Save settings
             using (Stream stream = File.Open("memory.set", FileMode.Create))
             {
                 new BinaryFormatter().Serialize(stream, gameSettings);
